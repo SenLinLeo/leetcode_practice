@@ -21,6 +21,7 @@ func findDuplicate(nums []int) int {
 	}
 
 	slow = 0
+	// a=(k−1)L+(L−b)=(k−1)L+c
 	for slow != fast {
 		slow = nums[slow]
 		fast = nums[fast]
