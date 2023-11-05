@@ -51,7 +51,18 @@ func sortString(s string) string {
 	return string(sBytes)
 }
 
+func maptest(test *[]map[string]interface{}) {
+
+	*test = append(*test, map[string]interface{}{
+		"x": "2",
+	})
+	fmt.Println("len inside function: ", len(*test))
+}
+
 func main() {
 	fmt.Println(findAnagramsLogN("cbaebabacd", "abc"))
 	fmt.Println(findAnagramsN("cbaebabacd", "abc"))
+	companyDetailsList := make([]map[string]interface{}, 0)
+	maptest(&companyDetailsList)
+	fmt.Println("len outside function: ", len(companyDetailsList))
 }
