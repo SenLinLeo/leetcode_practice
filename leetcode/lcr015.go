@@ -51,18 +51,35 @@ func sortString(s string) string {
 	return string(sBytes)
 }
 
-func maptest(test *[]map[string]interface{}) {
+// 滑动窗口
+func findAnagrams(s, p string) (ans []int) {
+	sLen, pLen := len(s), len(p)
+	if sLen < pLen {
+		return
+	}
 
-	*test = append(*test, map[string]interface{}{
-		"x": "2",
-	})
-	fmt.Println("len inside function: ", len(*test))
+	var sCount, pCount [26]int
+	for i, ch := range p {
+		sCount[s[i]-'a']++
+		pCount[ch-'a']++
+	}
+	if sCount == pCount {
+		ans = append(ans, 0)
+	}
+
+	for i, ch := range s[:sLen-pLen] {
+		sCount[ch-'a']--
+		sCount[s[i+pLen]-'a']++
+		if sCount == pCount {
+			ans = append(ans, i+1)
+		}
+	}
+	return
 }
 
 func main() {
 	fmt.Println(findAnagramsLogN("cbaebabacd", "abc"))
 	fmt.Println(findAnagramsN("cbaebabacd", "abc"))
-	companyDetailsList := make([]map[string]interface{}, 0)
-	maptest(&companyDetailsList)
-	fmt.Println("len outside function: ", len(companyDetailsList))
+	fmt.Println(findAnagrams("cbaebabacd", "abc"))
+
 }
