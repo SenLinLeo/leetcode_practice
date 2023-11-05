@@ -81,5 +81,4 @@ func main() {
 	fmt.Println(findAnagramsLogN("cbaebabacd", "abc"))
 	fmt.Println(findAnagramsN("cbaebabacd", "abc"))
 	fmt.Println(findAnagrams("cbaebabacd", "abc"))
-
 }
