@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="892583cf-752c-449f-9704-2931d64bdaa5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/func/check.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +32,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/leetcode/palinromicNumber.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/leetcode/reverseList.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/leetcode/lcr019.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/leetcode/lcr024.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/leetcode/lcr015.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/func/concurrency.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/func/gc.go" root0="FORCE_HIGHLIGHTING" />
