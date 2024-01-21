@@ -1,10 +1,6 @@
 // Package main 2024/1/22
 package main
 
-import (
-	"fmt"
-)
-
 func reverseBetween(head *ListNode, left int, right int) *ListNode {
 	dummy := &ListNode{Next: head}
 	p0 := dummy
@@ -27,6 +23,7 @@ func reverseBetween(head *ListNode, left int, right int) *ListNode {
 	return dummy.Next
 }
 
+/**
 func CreateNode(node *ListNode, max int) {
 	cur := node
 	for i := 1; i < max; i++ {
@@ -49,6 +46,7 @@ type ListNode struct {
 	Val  int
 	Next *ListNode
 }
+**/
 
 func main() {
 	var head = new(ListNode)
