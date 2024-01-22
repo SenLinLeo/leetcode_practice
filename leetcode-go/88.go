@@ -8,7 +8,7 @@ import (
 /**
 https://leetcode.cn/problems/merge-sorted-array/description/
 88. 合并两个有序数组
-时间复杂度：O(m+n) 最坏情况形如 nums1=[4,5,6,∗,∗,∗],nums2=[1,2,3]每个数都需要移动一次。
+时间复杂度：O(m+n) 最坏情况形如 nums1=[4,5,6,∗,∗,∗],nums2=[1,2,3]每个数都需要移动一次
 空间复杂度：O(1)
 **/
 func merge(nums1 []int, m int, nums2 []int, n int) {
