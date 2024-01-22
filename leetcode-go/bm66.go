@@ -7,9 +7,9 @@ import (
 
 /**
 BM66 最长公共子串
+https://www.nowcoder.com/share/jump/68216111705945764340
 给定两个字符串str1和str2,输出两个字符串的最长公共子串
 题目保证str1和str2的最长公共子串存在且唯一
-https://www.nowcoder.com/share/jump/68216111705945764340
 **/
 func lcs(str1 string, str2 string) string {
 	n, m := len(str1), len(str2)
