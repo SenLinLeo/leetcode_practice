@@ -38,5 +38,6 @@ func findLength(nums1 []int, nums2 []int) int {
 }
 
 func main() {
+	fmt.Println(findLength([]int{2, 2, 2, 2, 2}, []int{2, 2, 2, 2, 2}))
 	fmt.Println(findLength([]int{1, 2, 3, 2, 1}, []int{3, 2, 1, 4, 7}))
 }
