@@ -48,7 +48,7 @@ func partition(nums []int, p int, r int) int {
 }
 
 func main() {
-	list := []int{2, 44, 4, 8, 33, 1, 22, -11, 6, 34, 55, 54, 9}
+	list := []int{2, 44, 4, 8, 33, 1, 22, -11, 6, 34, 55, 54}
 	listSort := sortArray(list)
 	fmt.Println(listSort)
 }
