@@ -20,7 +20,6 @@ func reverseBetween(head *ListNode, left int, right int) *ListNode {
 
 	p0.Next.Next = cur
 	p0.Next = pre
-
 	return dummy.Next
 }
 
