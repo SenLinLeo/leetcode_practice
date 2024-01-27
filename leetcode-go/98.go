@@ -31,7 +31,6 @@ func main() {
 	head := &TreeNode{
 		Val: 2,
 	}
-
 	head.Left = &TreeNode{
 		Val: 1,
 	}
