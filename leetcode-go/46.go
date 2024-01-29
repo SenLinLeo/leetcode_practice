@@ -14,7 +14,7 @@ https://leetcode.cn/problems/permutations/
 **/
 func permute(nums []int) [][]int {
 	numsLen := len(nums)
-	ans := [][]int{}
+	var ans [][]int
 	path := make([]int, numsLen)
 	noPath := make([]bool, numsLen)
 	var dfs func(int)
@@ -39,5 +39,5 @@ func permute(nums []int) [][]int {
 }
 
 func main() {
-	fmt.Println(permute([]int{1,2,3}))
+	fmt.Println(permute([]int{1, 2, 3}))
 }
