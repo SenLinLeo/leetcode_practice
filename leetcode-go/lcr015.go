@@ -16,8 +16,13 @@ https://leetcode.cn/problems/VabMRr/description/
 解释:
 起始索引等于 0 的子串是 "cba", 它是 "abc" 的变位词。
 起始索引等于 6 的子串是 "bac", 它是 "abc" 的变位词。
+
+解题思路:
+滑动窗口
+根据题目要求，我们需要在字符串 sss 寻找字符串 ppp 的变位词。因为字符串 ppp 的变位词的长度一定与字符串 ppp 的长度相同，
+所以我们可以在字符串 sss 中构造一个长度为与字符串 ppp 的长度相同的滑动窗口，并在滑动中维护窗口中每种字母的数量；
+当窗口中每种字母的数量与字符串 ppp 中每种字母的数量相同时，则说明当前窗口为字符串 ppp 的变位词。
 **/
-// 滑动窗口
 func findAnagrams(s, p string) (ans []int) {
 	sLen, pLen := len(s), len(p)
 	if sLen < pLen {
