@@ -40,7 +40,7 @@ func findAnagrams(s, p string) (ans []int) {
 			ans = append(ans, i+1)
 		}
 	}
-	return
+	return ans
 }
 
 func main() {
