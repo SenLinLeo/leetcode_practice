@@ -23,8 +23,8 @@ func findAnagrams(s, p string) (ans []int) {
 	if sLen < pLen {
 		return
 	}
-
-	var sCount, pCount [26]int
+	const CharNum = 26
+	var sCount, pCount [CharNum]int
 	for i, ch := range p {
 		sCount[s[i]-'a']++
 		pCount[ch-'a']++
