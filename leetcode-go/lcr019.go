@@ -33,5 +33,4 @@ func isPalindrome(s string) bool {
 func main() {
 	println(validPalindrome("ada"))
 	println(validPalindrome("adac "))
-
 }
