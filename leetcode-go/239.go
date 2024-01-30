@@ -30,7 +30,6 @@ func maxSlidingWindow(nums []int, k int) []int {
 		if i >= k-1 {
 			ans = append(ans, nums[q[0]])
 		}
-
 	}
 
 	return ans
