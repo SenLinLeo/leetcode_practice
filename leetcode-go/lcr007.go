@@ -8,7 +8,12 @@ import (
 
 /**
 LCR 007. 三数之和
+https://leetcode.cn/problems/1fGaJU/description/
 给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a ，b ，c 使得 a + b + c = 0 请找出所有和为 0 且 不重复 的三元组。
+示例 1：
+
+输入：nums = [-1,0,1,2,-1,-4]
+输出：[[-1,-1,2],[-1,0,1]]
 **/
 func threeSum(nums []int) [][]int {
 	numsLen := len(nums)
@@ -41,7 +46,7 @@ func threeSum(nums []int) [][]int {
 			} else {
 				ans = append(ans, []int{x, nums[left], nums[right]})
 				for left++; left < right && nums[left] == nums[left-1]; left++ {
-				}
+				} // 跳过相等的
 				for right--; left < right && nums[right] == nums[right+1]; right-- {
 				}
 			}
