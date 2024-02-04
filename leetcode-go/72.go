@@ -17,8 +17,24 @@ horse -> rorse (将 'h' 替换为 'r')
 rorse -> rose (删除 'r')
 rose -> ros (删除 'e')
 **/
-func minDistance(word1 string, word2 string) int {
-
+func minDistance(s string, t string) int {
+	m := len(t)
+	f := make([]int, m+1)
+	for j := 1; j <= m; j++ {
+		f[j] = j
+	}
+	for _, x := range s {
+		pre := f[0]
+		f[0]++
+		for j, y := range t {
+			if x == y {
+				f[j+1], pre = pre, f[j+1]
+			} else {
+				f[j+1], pre = min(min(f[j+1], f[j]), pre)+1, f[j+1]
+			}
+		}
+	}
+	return f[m]
 }
 
 func main() {
