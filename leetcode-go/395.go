@@ -49,5 +49,5 @@ func max(a, b int) int {
 }
 
 func main() {
-	fmt.Println()
+	fmt.Println(longestSubstring("abaabbcxyz", 2))
 }
