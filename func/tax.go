@@ -27,5 +27,5 @@ func getMonth() string {
 
 func main() {
 	fmt.Println("getYear():", getYear(), "--", 13494.81+92610.00)            // 92610.00
-	fmt.Println("getMonth():", getMonth(), "--", 13494.81+92610.00+21909.28) // 21398.88 ->21909.28
+	fmt.Println("getMonth():", getMonth(), "--", 13494.81+92610.00+21909.28) // 21398.88 -> 21909.28
 }
