@@ -19,7 +19,7 @@ func getMonth() string {
 	otherAmount := 10340.00
 	otherTax := otherAmount * 0.03
 	resTax := 1739.37 - otherTax
-	resTax = 918.77
+	resTax = 918.77 // 528.84
 	resAmount := 29400 + 200 - resTax - 6771.95
 
 	return fmt.Sprintf("%0.2f", resAmount)
