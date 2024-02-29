@@ -11,8 +11,7 @@ import (
 当月个税=累计应纳税所得额*年度税率-年度扣除数-当年度累计已缴纳个税
 **/
 func getYear() string {
-	totalYear := 29400 * 3.5
-	afterTax := totalYear - totalYear*0.1
+	afterTax := 92820.00
 	return fmt.Sprintf("%0.2f", afterTax)
 }
 
