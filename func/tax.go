@@ -18,12 +18,8 @@ func getYear() string {
 
 // https://www.gerensuodeshui.cn/city/%E6%B7%B1%E5%9C%B3.html
 func getMonth() string {
-	// 调整项
-	otherAmount := 10340.00
-	otherTax := otherAmount * 0.03
-	resTax := 1739.37 - otherTax
-	resTax = 649.25 // 528.84
-	resAmount := 29400 + 200 - resTax - 6771.95
+	tax := 669.25
+	resAmount := 29400 + 200 - 2826.95 - 3945.00 - tax
 
 	return fmt.Sprintf("%0.2f", resAmount)
 }
@@ -31,11 +27,7 @@ func getMonth() string {
 func main() {
 	startAmount := 13494.81
 	fYear, _ := strconv.ParseFloat(getYear(), 64)
-	fmt.Println("第一笔getYear():", getYear(), " 余额: ", startAmount+fYear) // 92610.00
+	fmt.Println("第一笔getYear():", getYear(), " 余额: ", startAmount+fYear)
 	fAmount, _ := strconv.ParseFloat(getMonth(), 64)
-	fmt.Println("第二笔getMonth():", getMonth(), " 余额: ", startAmount+fYear+fAmount) // 21398.88 -> 21909.28
+	fmt.Println("第二笔getMonth():", getMonth(), " 余额: ", startAmount+fYear+fAmount)
 }
-
-/**
-
-**/
