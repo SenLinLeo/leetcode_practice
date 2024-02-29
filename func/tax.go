@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 /**
 公式：
@@ -19,15 +22,18 @@ func getMonth() string {
 	otherAmount := 10340.00
 	otherTax := otherAmount * 0.03
 	resTax := 1739.37 - otherTax
-	resTax = 918.77 // 528.84
+	resTax = 649.25 // 528.84
 	resAmount := 29400 + 200 - resTax - 6771.95
 
 	return fmt.Sprintf("%0.2f", resAmount)
 }
 
 func main() {
-	fmt.Println("getYear():", getYear(), "--", 13494.81+92610.00)            // 92610.00
-	fmt.Println("getMonth():", getMonth(), "--", 13494.81+92610.00+21909.28) // 21398.88 -> 21909.28
+	startAmount := 13494.81
+	fYear, _ := strconv.ParseFloat(getYear(), 64)
+	fmt.Println("第一笔getYear():", getYear(), " 余额: ", startAmount+fYear) // 92610.00
+	fAmount, _ := strconv.ParseFloat(getMonth(), 64)
+	fmt.Println("第二笔getMonth():", getMonth(), " 余额: ", startAmount+fYear+fAmount) // 21398.88 -> 21909.28
 }
 
 /**
