@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"github.com/dustin/go-humanize"
 )
 
 /**
@@ -12,21 +13,24 @@ import (
 **/
 func getYear() string {
 	afterTax := 92820.00
-	return fmt.Sprintf("%0.2f", afterTax)
+	return fmt.Sprintf("%v", humanize.Commaf(afterTax))
 }
 
 // https://www.gerensuodeshui.cn/city/%E6%B7%B1%E5%9C%B3.html
-func getMonth() string {
-	tax := 669.25
+func getMonth() float64 {
+	tax := 455.11 + 614.35
 	resAmount := 29400 + 200 - 2826.95 - 3945.00 - tax
 
-	return fmt.Sprintf("%0.2f", resAmount)
+	return resAmount
 }
 
 func main() {
 	startAmount := 13494.81
 	fYear, _ := strconv.ParseFloat(getYear(), 64)
-	fmt.Println("第一笔getYear():", getYear(), " 余额: ", startAmount+fYear)
-	fAmount, _ := strconv.ParseFloat(getMonth(), 64)
-	fmt.Println("第二笔getMonth():", getMonth(), " 余额: ", startAmount+fYear+fAmount)
+	fmt.Println("第1笔getMonth():", humanize.Commaf(getMonth()), " 余额: ", humanize.Commaf(startAmount+fYear))
+	fmt.Println("第2笔getYear():", getYear(), " 余额: ", humanize.Commaf(startAmount+fYear+getMonth()))
+	/**
+	第1笔getMonth(): 21,758.59  余额:  13,494.81
+	第2笔getYear(): 92,820  余额:  35,253.4
+	**/
 }
