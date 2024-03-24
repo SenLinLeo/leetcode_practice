@@ -33,4 +33,7 @@ func main() {
 	第1笔getMonth(): 21,758.59  余额:  13,494.81
 	第2笔getYear(): 92,820  余额:  35,253.4
 	**/
+
+	fmt.Println(humanize.Commaf(102900.00))
+	fmt.Println(humanize.Commaf(102900.00 - 29400.00 - 29400.00))
 }
